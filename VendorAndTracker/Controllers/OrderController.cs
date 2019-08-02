@@ -15,10 +15,16 @@ namespace VendorAndTracker{
         }
 
         [HttpPost("/vendor/{vendorId}/new")]
-        public ActionResult New(int vendorId, string orderName){
+        public ActionResult Create(int vendorId, string orderName){
             Order newOrder = new Order(orderName);
             Vendor.getVendorById(vendorId).addOrder(newOrder);
             return RedirectToAction("/vendor/{vendorId}");
+        }
+
+
+        [HttpGet("/vendor/{vendorId}/new")]
+        public ActionResult New(int vendorId){
+            return View(Vendor.getVendorById(vendorId));
         }
     }
 }

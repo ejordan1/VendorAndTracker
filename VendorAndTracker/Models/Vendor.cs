@@ -9,7 +9,7 @@ namespace VendorAndTracker.Models{
         private static int _idCounter = 0;
         public static List<Vendor> _allVendors;
 
-        public List<Order> orders = new List<Order>();
+        public List<Order> _orders = new List<Order>();
 
         public Vendor(string name){
             _name = name;

@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+@using VendorAndTracker.Models;
+
+<h3>Here are all the orders in this category:</h3>
+
+<ol>
+@foreach (Order order in @Model._orders)
+{
+  <li><a href='/vendor/@Model._id/@Model._id'>@Model._name</a></li>
+}
+</ol>
+
+<p><a href='/vendor/@Model._id/new'>Add a new item</a></p>
+<p><a href='/vendor'>Return to category list</a></p>
+<p><a href='/'>Return to Main Page</a></p>

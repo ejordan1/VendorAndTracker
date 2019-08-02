@@ -1,6 +1,19 @@
-@using VendorAndTracker.Models;
-
-@foreach(Vendor vendor in Vendor._allVendors){
-    <p>@vendor._name</p>
+@{
+  Layout = "_Layout";
 }
 
+@using VendorAndTracker.Models;
+
+<h1>Categories</h1>
+
+@if (@Vendor._allVendors.Count == 0)
+{
+  <h3>No categories have been added yet!</h3>
+} 
+
+@foreach (Vendor vendor in @Vendor._allVendors)
+{
+  <h3><a href='/vendor/@vendor._id'>@vendor._name</a></h3>
+}
+
+<p><a href='/'>Back home</a></p>
