@@ -13,7 +13,7 @@ Create vendors, add orders to specific vendors.
 
 ## Setup/Installation Requirements
 
-* _Download the folder from git_
+* _Download the folder_
 * _navigate to the folder and type in "dotnet run" into console. _
 
 ## Known Bugs
