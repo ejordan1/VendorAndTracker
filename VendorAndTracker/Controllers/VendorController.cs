@@ -6,20 +6,27 @@ namespace VendorAndTracker.Controllers{
 
     class VendorController : Controller{
 
-        [HttpGet("/")]
+        [HttpGet("/Vendor")]
         public ActionResult Index(){
                 return View(Vendor._allVendors);
             }
         
 
-        [HttpGet("/Vendors/{id}")]
-        public ActionResult Show(int id){
-            return View(Vendor.getVendorById(id));
+        [HttpGet("/Vendor/{vendorId}")]
+        public ActionResult Show(int vendorId){
+            return View(Vendor.getVendorById(vendorId));
         }
 
-        [HttpPost("/Vendors/new")]
-        public ActionResult New(string newVendorName){
-            Vendor newVendor = new Vendor(newVendorName);
+        [HttpPost("/Vendor")]
+        public ActionResult Create(string newVendorName){
+            Vendor newVendor = new Vendor(newVendorName); //automatically adds to vendorlist
+            return RedirectToAction("Index");
+
+        }
+
+        [HttpGet("/Vendor/new")]
+        public ActionResult New(){
+            return View();
         }
     }
 }
