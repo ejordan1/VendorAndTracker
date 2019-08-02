@@ -16,7 +16,17 @@ namespace VendorAndTracker.Models{
             if (_allVendors == null){
                 _allVendors = new List<Vendor>();
             }
+            _allVendors.Add(this);
 
+        }
+
+        public static Vendor getVendorById(int id){
+            for(int i = 0; i < _allVendors.Count; i++){
+                if (_allVendors[i]._id == id){
+                    return _allVendors[i];
+                }
+            }
+            throw new System.ArgumentException("No vendor of this Id");
         }
     }
 }
