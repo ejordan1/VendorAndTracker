@@ -25,13 +25,13 @@ namespace VendorAndTracker.Models{
         public void addOrder(Order orderToAdd){
             _idCounter++;
             orderToAdd._id = _idCounter;
-            orders.Add(orderToAdd);
+            _orders.Add(orderToAdd);
         }
 
         public Order getOrderById(int id){
-            for (int i = 0; i < orders.Count; i++){
-                if (orders[i]._id == id){
-                    return orders[i];
+            for (int i = 0; i < _orders.Count; i++){
+                if (_orders[i]._id == id){
+                    return _orders[i];
                 }
             }
             throw new System.ArgumentException("No order of this Id");
