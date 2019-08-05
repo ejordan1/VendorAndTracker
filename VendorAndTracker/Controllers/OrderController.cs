@@ -30,6 +30,3 @@ namespace VendorAndTracker{
         }
     }
 }
-
-//this is done differently than the example: the example has it where it 
-//creates a new item but as a category controller
