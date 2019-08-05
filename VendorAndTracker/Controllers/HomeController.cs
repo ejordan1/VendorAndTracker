@@ -7,6 +7,7 @@ namespace VendorAndTracker.Controllers{
 
         [HttpGet("/")]
         public ActionResult Index(){
+            Console.WriteLine("HOME CONTROLLER");
             return View();
         }
     }

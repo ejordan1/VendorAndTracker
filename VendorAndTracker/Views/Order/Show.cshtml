@@ -4,8 +4,8 @@
 
 <h1>Order Details: </h1>
 
-<h2>Item: @Model["item"]._name</h2>
+<h2>Item: @Model["order"]._name</h2>
 <h3>Vendor: @Model["vendor"]._name</h3>
 
-<a href='/vendor/@Model["vendor"].Id/new'>Add another item</a>
+<a href='/vendor/@Model["vendor"]._id/new'>Add another item</a>
 <a href='/vendor'>View all vendors</a>
